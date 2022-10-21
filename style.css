@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #000000, #BC1E22);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-family: monospace;
+}
+
+a {
+    color: whitesmoke;
+}
+
+a:hover {
+    color: #394A59;
+}
+
+header {
+    grid-area: header;
+    background-color: #64696C;
+    border: solid 1px red;
+    border-radius: 5px;
+    color: #fff;
+    text-shadow: 0 0 0.625em #bc1e22, 0 0 1.5625em #bc1e22, -0.0625em 0 0.125em rgb(0 0 0 / 50%)
+}
+
+#plantilla {
+    display: grid;
+    height: 100vh;
+    grid-template-areas:
+        " header header "
+        " texto fotoindex "
+        " footer footer "
+    ;
+    grid-template-rows: 70px auto 5px;
+    grid-template-columns: repeat (2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 25px;
+}
+
+footer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-area: footer;
+    color: black;
+    background-color: #64696C;
+    border: solid 1px #FFFFFF;
+    border-radius: 5px;
+    font-size: 11px;
+    align-self: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+ul li {
+    display: inline;
+    padding: 10px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    color: red;
+    text-transform: uppercase;
+}
+
+ul li:hover {
+    background-color: crimson;
+}
+
+
+#texto {
+    grid-area: texto;
+    color: whitesmoke;
+    border: solid 1px #FFFFFF;
+    border-radius: 15px;
+    padding-left: 5px;
+
+}
+
+img {
+    width: 98%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+#fotoindex {
+    grid-area: fotoindex;
+    display: flex;
+}
+
+@media screen and (max-width: 680px) {
+    body {
+        background: linear-gradient(to bottom, #000000, #BC1E22);
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    #plantilla {
+        grid-template-areas:
+            " header header "
+            " texto texto "
+            " fotoindex fotoindex "
+            " footer footer "
+        ;
+        grid-template-rows: 85px 220px auto 5px;
+        grid-template-columns: repeat (2, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 25px;
+    }
+}
+
+@media (min-width: 1600px) {
+    body {
+        background: linear-gradient(to bottom, #000000, #BC1E22);
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    #plantilla {
+        grid-template-areas:
+            " header header"
+            " texto fotoindex"
+            " footer footer";
+        grid-template-rows: 65px auto 5px;
+        grid-template-columns: repeat (2, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 25px;
+    }
+}
